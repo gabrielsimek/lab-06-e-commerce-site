@@ -3,8 +3,7 @@ export const fruits = [
         type: 'fresh-fruit',
         name: 'Red Apple',
         color: 'red',
-        image: '../assets/apple.jpg',
-        description: 'Delicious red apples',
+        image: `../assets/apple.jpg`,
         isCruncy: true,
         isOrganic: false,
         price: 3
@@ -14,7 +13,6 @@ export const fruits = [
         name: 'Banana',
         color: 'yellow',
         image: '../assets/banana.jpg',
-        description: 'Delicious organic bananas',
         isCruncy: false,
         isOrganic: true,
         price: 2
@@ -24,7 +22,6 @@ export const fruits = [
         name: 'Blueberries',
         color: 'blue',
         image: '../assets/blueberries.jpg',
-        description: 'Great for smoothies!',
         isCruncy: false,
         isOrganic: false,
         price: 5
@@ -34,7 +31,6 @@ export const fruits = [
         name: 'Cantaloupe',
         color: 'green',
         image: '../assets/cantaloupe.jpg',
-        description: 'Fresh Cantaloupe Melon!',
         isCruncy: false,
         isOrganic: false,
         price: 4
@@ -44,10 +40,19 @@ export const fruits = [
         name: 'Strawberries',
         color: 'red',
         image: '../assets/strawberries.jpg',
-        description: 'Yummy frozen strawberries',
         isCruncy: false,
         isOrganic: true,
         price: 6
+    },
+    
+    { 
+        type: 'fresh fruit',
+        name: 'Manderins',
+        color: 'orange',
+        image: '../assets/mandarins.jpg',
+        isCruncy: false,
+        isOrganic: false,
+        price: 2
     },
     
     
