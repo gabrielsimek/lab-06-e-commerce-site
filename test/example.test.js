@@ -7,8 +7,7 @@ const test = QUnit.test;
 test('Compare a dynamically created li to the outerHTML string of the hard coded Li', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<li class="fruits" style="background-color: red;">
-<p class="name">Red Apple</p><p class="type">Fresh Fruit</p><img src="../assets/apple.jpg"><p class="is-cruncy">Cruncy!</p><p>Not Organic</p><p class="price">3$ per pound</p><button>Add Red Apple to Cart!</button></li>`;
+    const expected = `<li class="fruits" style="background-color: red;"><p class="name">Red Apple</p><p class="type">Fresh Fruit</p><img src="../assets/apple.jpg"><p class="is-cruncy">Cruncy!</p><p>Not Organic</p><p class="price">3$ per pound</p><button>Add Red Apple to Cart!</button></li>`;
 
     
     //Act 
