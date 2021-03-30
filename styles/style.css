@@ -79,7 +79,7 @@ header img {
 }
 
 p {
-    margin: var(--gutter);
+    margin:0;
 }
   
 footer {
@@ -111,3 +111,37 @@ footer {
     }
 
   }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+  .fruits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+
+.name {
+    font-weight: bold;
+}
+
+.type {
+    font-style: italic;
+}
+
+
+img {
+    height: 100px;
+    width: auto;
+}
+
+.price {
+    color: green;
+}
+
