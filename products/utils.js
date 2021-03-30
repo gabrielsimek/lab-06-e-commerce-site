@@ -11,6 +11,9 @@ export function createFruitLi(fruits) {
     const typeP = document.createElement('p');
     typeP.classList.add('type');
     typeP.textContent = fruits.type;
+    if (fruits.type === 'frozen-fruit') {
+        typeP.style.backgroundColor = 'lightblue';
+    }
 
     const img = document.createElement('img');
     img.src = fruits.image;

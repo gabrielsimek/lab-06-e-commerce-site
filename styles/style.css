@@ -133,12 +133,15 @@ footer {
 
 .type {
     font-style: italic;
+    border: solid black;
+    padding: 5px;
+    background-color: lightgreen;
 }
 
 
 img {
     height: 100px;
-    width: auto;
+    width: 150px;
 }
 
 .price {

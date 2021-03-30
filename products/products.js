@@ -12,7 +12,7 @@ export const fruits = [
         type: 'fresh-fruit',
         name: 'Banana',
         color: 'yellow',
-        image: '../assets/banana.jpg',
+        image: `../assets/banana.jpg`,
         isCruncy: false,
         isOrganic: true,
         price: 2
