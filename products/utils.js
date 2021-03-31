@@ -20,7 +20,7 @@ export function createFruitLi(fruits) {
 
     const isCruncy = document.createElement('p');
     isCruncy.classList.add('is-cruncy');
-    isCruncy.textContent = fruits.isCruncy ? 'Cruncy!' : 'Not Cruncy!';
+    isCruncy.textContent = fruits.isCruncy ? 'Crunchy!' : 'Not Crunchy!';
 
     const isOrganic = document.createElement('p');
     isOrganic.textContent = fruits.isOrganic ? 'Organic' : 'Not Organic';
@@ -34,6 +34,7 @@ export function createFruitLi(fruits) {
 
     const button = document.createElement('button');
     button.textContent = `Add ${fruits.name} to Cart!`;
+    button.value = fruits.id;
 
     li.append(nameP, typeP, img, isCruncy, isOrganic, priceP, button);
     return li;

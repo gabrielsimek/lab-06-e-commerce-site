@@ -1,5 +1,6 @@
 export const fruits = [
     {
+        id: 'red-apple',
         type: 'fresh-fruit',
         name: 'Red Apple',
         color: 'red',
@@ -9,6 +10,7 @@ export const fruits = [
         price: 3
     },
     {
+        id: 'banana',
         type: 'fresh-fruit',
         name: 'Banana',
         color: 'yellow',
@@ -18,6 +20,7 @@ export const fruits = [
         price: 2
     },
     {
+        id: 'blueberries',
         type: 'frozen-fruit',
         name: 'Blueberries',
         color: 'blue',
@@ -27,6 +30,7 @@ export const fruits = [
         price: 5
     },
     {
+        id: 'cantaloupe',
         type: 'fresh-fruit',
         name: 'Cantaloupe',
         color: 'green',
@@ -36,6 +40,7 @@ export const fruits = [
         price: 4
     },
     {
+        id: 'strawberries',
         type: 'frozen-fruit',
         name: 'Strawberries',
         color: 'red',
@@ -46,6 +51,7 @@ export const fruits = [
     },
     
     { 
+        id: 'manderins',
         type: 'fresh fruit',
         name: 'Manderins',
         color: 'orange',
