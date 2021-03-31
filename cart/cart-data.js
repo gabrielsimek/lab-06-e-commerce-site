@@ -11,5 +11,13 @@ export const cart = [
         id: 2,
         quantity: 4
     },
+    {
+        id: 3,
+        quantity: 4
+    },
+    {
+        id: 5,
+        quantity: 2
+    },
 ];
   

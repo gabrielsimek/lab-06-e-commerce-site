@@ -1,4 +1,4 @@
-import { fruits } from './products/products.js';
+
 
 export function createFruitLi(fruits) {
     const li = document.createElement('li');
@@ -61,7 +61,48 @@ export function calcItemTotal(cartArray, productArray){
         sum = sum + price;
        
         
-        
     }
     return sum;
+}
+
+
+//Render DOM
+
+export function createCartTd(cartItem, product) {
+    
+
+    const trEl = document.createElement('tr');
+
+    const nameEl = document.createElement('td');
+    nameEl.textContent = product.name;
+
+    const priceEl = document.createElement('td');
+    priceEl.textContent = `$${product.price}`;
+
+    const quantityEl = document.createElement('td');
+    quantityEl.textContent = cartItem.quantity;
+
+
+
+
+
+    trEl.append(nameEl, priceEl, quantityEl);
+    return trEl;
+  
+}
+
+
+//Render Total price row
+export function createTotalRow(cartArray, productArray) {
+    const trEl = document.createElement('tr');
+    const blankEl1 = document.createElement('td');
+    const blankEl2 = document.createElement('td');
+
+    const totalEl = document.createElement('td');
+    totalEl.textContent = `Total: $${calcItemTotal(cartArray, productArray)}`;
+    
+
+
+    trEl.append(blankEl1, blankEl2, totalEl);
+    return trEl;
 }
