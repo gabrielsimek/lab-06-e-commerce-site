@@ -1,0 +1,12 @@
+table {
+    width: 100%;
+    border: solid 1px black;
+}
+
+th {
+    font-size: 1.5rem;
+}
+
+td {
+    border: solid black 1px;
+}
