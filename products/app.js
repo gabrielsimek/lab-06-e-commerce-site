@@ -1,5 +1,5 @@
 import { fruits } from './products.js';
-import { createFruitLi } from './utils.js';
+import { createFruitLi } from '../utils.js';
 
 const ulEl = document.querySelector('#products');
 
