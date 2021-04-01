@@ -1,5 +1,5 @@
 
-
+import { addToCart } from './local-storage-utils.js';
 export function createFruitLi(fruits) {
     const li = document.createElement('li');
     li.classList.add('fruits');
@@ -36,6 +36,10 @@ export function createFruitLi(fruits) {
     const button = document.createElement('button');
     button.textContent = `Add ${fruits.name} to Cart!`;
     button.value = fruits.id;
+    button.addEventListener('click', () => {
+        addToCart(fruits.id);
+
+    });
 
     li.append(nameP, typeP, img, isCruncy, isOrganic, priceP, button);
     return li;
