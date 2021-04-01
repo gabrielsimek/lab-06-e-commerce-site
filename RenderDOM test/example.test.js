@@ -7,7 +7,7 @@ const test = QUnit.test;
 test('create and return table row with table data appended to it based on information from the cart item and product product item ', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<tr><td>Red Apple</td><td>$3</td><td>4</td></tr>`;
+    const expected = `<tr><td>Red Apple</td><td>$12</td><td>4</td></tr>`;
 
     
     //Act 

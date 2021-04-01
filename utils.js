@@ -53,8 +53,8 @@ export function findById(array, id) {
 }
 
 //caluclate item total
-export function multiplyiGuess(x, y){
-    const sum = x * y;
+export function getItemPrice(productPrice, quantity){
+    const sum = productPrice * quantity;
     return sum;
 }
 //calCartTotal
@@ -62,7 +62,7 @@ export function calcItemTotal(cartArray, productArray){
     let sum = 0;
     for (let cartItem of cartArray){
         const product = findById(productArray, cartItem.id);
-        const price = multiplyiGuess(product.price, cartItem.quantity);
+        const price = getItemPrice(product.price, cartItem.quantity);
         sum += price;
         
     }
@@ -80,7 +80,7 @@ export function createCartTd(cartItem, product) {
     nameEl.textContent = product.name;
 
     const priceEl = document.createElement('td');
-    priceEl.textContent = `$${product.price}`;
+    priceEl.textContent = `$${getItemPrice(product.price, cartItem.quantity)}`;
 
     const quantityEl = document.createElement('td');
     quantityEl.textContent = cartItem.quantity;
