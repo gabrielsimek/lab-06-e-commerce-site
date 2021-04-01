@@ -37,6 +37,6 @@ test('input an array of objects and an id and return the objects with a matching
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.deepEqual(actual1, expected1, 'first obj, id 1');
-    expect.deepEqual(actual2, expected2, 'first obj, id 1');
+    expect.deepEqual(actual2, expected2, 'second obj, id2');
     
 });
