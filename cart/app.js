@@ -10,6 +10,6 @@ for (let item of cart){
     const newRow = createCartTd(item, product);
     table.append(newRow);
 }
-
+   
 const totalRow = createTotalRow(cart, fruits);
 table.append(totalRow);
