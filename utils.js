@@ -52,19 +52,22 @@ export function findById(array, id) {
     }
 }
 
-//calItemTotal
+//caluclate item total
+export function multiplyiGuess(x, y){
+    const sum = x * y;
+    return sum;
+}
+//calCartTotal
 export function calcItemTotal(cartArray, productArray){
     let sum = 0;
     for (let cartItem of cartArray){
         const product = findById(productArray, cartItem.id);
-        const price = product.price * cartItem.quantity;
-        sum = sum + price;
-       
+        const price = multiplyiGuess(product.price, cartItem.quantity);
+        sum += price;
         
     }
     return sum;
 }
-
 
 //Render DOM
 
@@ -96,12 +99,14 @@ export function createCartTd(cartItem, product) {
 export function createTotalRow(cartArray, productArray) {
     const trEl = document.createElement('tr');
     const blankEl1 = document.createElement('td');
+    
     const blankEl2 = document.createElement('td');
+    
 
     const totalEl = document.createElement('td');
     totalEl.textContent = `Total: $${calcItemTotal(cartArray, productArray)}`;
     
-
+    
 
     trEl.append(blankEl1, blankEl2, totalEl);
     return trEl;
