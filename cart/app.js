@@ -37,7 +37,8 @@ const totalRow = createTotalRow(cart, fruits);
 
 
 table.append(totalRow);
-   
+   const curentURL = window.location.href;
+   console.log(curentURL);
 submitButton.addEventListener('click', () => {
     const alertCart = JSON.stringify(cart, true, 2);
     alert(alertCart);
