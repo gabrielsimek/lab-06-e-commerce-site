@@ -37,7 +37,13 @@ const totalRow = createTotalRow(cart, fruits);
 
 
 table.append(totalRow);
-
+if (cart.length <= 0){
+    submitButton.classList.add('hidden');
+    alert('Go Buy some fruit!');
+}
+// if (calcCartTotal(cart, fruits) <= 0) {
+//     submitButton.classList.add('hidden');
+// }
 
 submitButton.addEventListener('click', () => {
     const alertCart = JSON.stringify(cart, true, 2);

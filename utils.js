@@ -1,5 +1,5 @@
 
-import { addToCart, /*getCart*/ } from './local-storage-utils.js';
+import { addToCart, getCart } from './local-storage-utils.js';
  
 export function createFruitLi(fruits) {
     const li = document.createElement('li');
@@ -118,4 +118,15 @@ export function createTotalRow(cartArray, productArray) {
 
     trEl.append(blankEl1, blankEl2, totalEl);
     return trEl;
+}
+
+//get cart quantity
+export function itemsInCart(){
+    const cart = getCart();
+    let cartQuantity = 0;
+    for (let item of cart){
+        cartQuantity = cartQuantity + item.quantity;
+    }
+    return cartQuantity;
+
 }
