@@ -37,12 +37,20 @@ const totalRow = createTotalRow(cart, fruits);
 
 
 table.append(totalRow);
-   const curentURL = window.location.href;
-   console.log(curentURL);
+
+
 submitButton.addEventListener('click', () => {
     const alertCart = JSON.stringify(cart, true, 2);
+    
     alert(alertCart);
-    window.location = '/';
+    const curentURL = window.location.href;
+    if (curentURL === 'https://gabrielsimek.github.io/lab-06-e-commerce-site/cart/') {
+        window.location = 'https://gabrielsimek.github.io/lab-06-e-commerce-site/';
+    } else {
+        window.location = '/';
+    }
+    
+    
     localStorage.clear();
 
 });
