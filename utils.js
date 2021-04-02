@@ -33,12 +33,14 @@ export function createFruitLi(fruits) {
         priceP.style.color = 'red';
     }
     priceP.textContent = `${fruits.price}$ per pound`;
-
+    const cartCounterEl = document.getElementById('cart-counter');
     const button = document.createElement('button');
     button.textContent = `Add ${fruits.name} to Cart!`;
     button.value = fruits.id;
     button.addEventListener('click', () => {
         addToCart(fruits.id);
+        cartCounterEl.textContent = itemsInCart();
+
         // const cart = getCart();
         // console.log(cart);
         
