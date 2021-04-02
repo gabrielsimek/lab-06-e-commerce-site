@@ -1,5 +1,6 @@
 
-import { addToCart } from './local-storage-utils.js';
+import { addToCart, /*getCart*/ } from './local-storage-utils.js';
+ 
 export function createFruitLi(fruits) {
     const li = document.createElement('li');
     li.classList.add('fruits');
@@ -38,6 +39,9 @@ export function createFruitLi(fruits) {
     button.value = fruits.id;
     button.addEventListener('click', () => {
         addToCart(fruits.id);
+        // const cart = getCart();
+        // console.log(cart);
+        
 
     });
 
@@ -62,7 +66,7 @@ export function getItemPrice(productPrice, quantity){
     return sum;
 }
 //calCartTotal
-export function calcItemTotal(cartArray, productArray){
+export function calcCartTotal(cartArray, productArray){
     let sum = 0;
     for (let cartItem of cartArray){
         const product = findById(productArray, cartItem.id);
@@ -108,7 +112,7 @@ export function createTotalRow(cartArray, productArray) {
     
 
     const totalEl = document.createElement('td');
-    totalEl.textContent = `Total: $${calcItemTotal(cartArray, productArray)}`;
+    totalEl.textContent = `Total: $${calcCartTotal(cartArray, productArray)}`;
     
     
 

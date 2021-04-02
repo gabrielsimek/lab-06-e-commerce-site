@@ -1,10 +1,20 @@
 import { fruits } from '../products/products.js';
-import { getCart, setCart } from '../local-storage-utils.js';
+import { getCart } from '../local-storage-utils.js';
 import { findById, createCartTd, createTotalRow } from '../utils.js';
 const submitButton = document.getElementById('submit');
-console.log(submitButton);
+
 const table = document.getElementById('table');
 const cart = getCart();
+// setCart(cart);
+// console.log(cart);
+// setCart(cart);
+
+// const cartItem = [{
+//     id: 3,
+//     quantity: 4
+// }];
+// const cartItemLocal = JSON.stringify(cartItem);
+// localStorage.setItem('CART', cartItemLocal);
 
 
 for (let item of cart){
@@ -27,7 +37,7 @@ const totalRow = createTotalRow(cart, fruits);
 
 
 table.append(totalRow);
-
+   
 submitButton.addEventListener('click', () => {
     const alertCart = JSON.stringify(cart, true, 2);
     alert(alertCart);
@@ -35,3 +45,5 @@ submitButton.addEventListener('click', () => {
     localStorage.clear();
 
 });
+
+
